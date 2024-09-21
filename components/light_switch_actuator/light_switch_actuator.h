@@ -1,12 +1,12 @@
 #pragma once
 
-#include "esphome/core/components.h"
+#include "esphome/core/component.h"
 #include "esphome/components/switch/switch.h"
 #include <Stepper.h>
 
 namespace esphome {
 namespace light_switch_actuator {
-class LightSwitchActuator : public esphome::Component, public esphome::switch_::Switch
+class LightSwitchActuator : public esphome::Component, public esphome::switch_::Switch {
  public:
   void setup() override;
   void write_state(bool state) override;
@@ -24,5 +24,6 @@ class LightSwitchActuator : public esphome::Component, public esphome::switch_::
   static const int stepsPerRevolution = 2048;
 
   Stepper myStepper = Stepper(stepsPerRevolution, IN1, IN2, IN3, IN4);
+}
 }
 }
