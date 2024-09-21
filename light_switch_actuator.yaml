@@ -1,0 +1,38 @@
+esphome:
+  name: kitchen-lightswitchactuator
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: "metru4-Misnon-quzwyh"
+
+ota:
+  - platform: esphome
+    password: "metru4-Misnon-quzwyh"
+
+wifi:
+  ssid: "zentrumdermacht"
+  password: "jesusrockt"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Kitchen-Lightswitchactuator"
+    password: "nZJSR3h9jMxn"
+
+external_components:
+  - source: ./components/light_switch_actuator
+
+switch:
+  - platform: light_switch_actuator
+    name: "Kitchen Light Switch Actuator"
+
+
+captive_portal:
+    
