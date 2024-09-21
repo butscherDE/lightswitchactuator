@@ -24,6 +24,6 @@ class LightSwitchActuator : public esphome::Component, public esphome::switch_::
   static const int stepsPerRevolution = 2048;
 
   Stepper myStepper = Stepper(stepsPerRevolution, IN1, IN2, IN3, IN4);
-}
+};
 }
 }
