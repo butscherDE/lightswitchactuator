@@ -27,7 +27,7 @@ wifi:
     password: "nZJSR3h9jMxn"
 
 external_components:
-  - source: ./components/light_switch_actuator
+  - source: ./components
 
 switch:
   - platform: light_switch_actuator
